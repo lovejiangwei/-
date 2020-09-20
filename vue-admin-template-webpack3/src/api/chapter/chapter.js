@@ -38,6 +38,13 @@ export default {
             data: chapter
         })
     },
+    //ailyun 视频删除
+    removeVideoById(id){
+        return request({
+            url: `/eduvod/video/${id}`,
+            method: 'delete'
+        })
+    },
  
   
 }
