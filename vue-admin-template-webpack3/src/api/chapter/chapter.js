@@ -37,6 +37,7 @@ export default {
             method: 'post',
             data: chapter
         })
+        
     },
     //ailyun 视频删除
     removeVideoById(id){
