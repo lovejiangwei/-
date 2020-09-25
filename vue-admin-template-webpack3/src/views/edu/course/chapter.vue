@@ -61,6 +61,7 @@
            :on-success="handleVodUploadSuccess"
            :on-remove="handleVodRemove"
            :before-remove="beforeVodRemove"
+           :on-error="error"
            :on-exceed="handleUploadExceed"
            :file-list="fileList"
            :action="BASE_API+'/eduvod/video/upload'"
@@ -157,6 +158,13 @@ export default {
           this.$message({
             type: 'success',
             message: '视频上传成功'
+          })
+    },
+    //视频上传失败
+    error(err, file, fileList){
+      this.$message({
+            type: 'error',
+            message: '视频上传失败'
           })
     },
     //删除上传文件时钩子函数
